@@ -11,10 +11,11 @@ export default {
   data() {
     return {
       childText: ""
-    },
+    };
+  },
     async created() {
     const data = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&appid=PQF7Paak29Wr688IIVCXC7As7YDPMBGko0KBwdF`
+      `https://apis.postcode-jp.com/api/v3/postcodes/postcode?apiKey=string=PQF7Paak29Wr688IIVCXC7As7YDPMBGko0KBwdF`
     );
   },
   methods: {
