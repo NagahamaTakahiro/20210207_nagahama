@@ -17,6 +17,7 @@ export default {
     const data = await axios.get(
       `https://apis.postcode-jp.com/api/v3/postcodes/postcode?apiKey=string=PQF7Paak29Wr688IIVCXC7As7YDPMBGko0KBwdF`
     );
+    console.log(data);
   },
   methods: {
     sendParent() {
