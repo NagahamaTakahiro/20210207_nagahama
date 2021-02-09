@@ -8,21 +8,13 @@
 <script>
 import axios from "axios";
 export default {
-  data() {
-    return {
-      childText: ""
-    };
-  },
-    async function() {
-    const data = await axios.get(
-      `https://apis.postcode-jp.com/api/v3/postcodes/postcode?apiKey=string=PQF7Paak29Wr688IIVCXC7As7YDPMBGko0KBwdF`
-    );
-    console.log(data);
-  },
   methods: {
     sendParent() {
-      this.$emit("getChildText", this.childText);
-    }
-  }
+      const data = await axios.get(
+      `https://apis.postcode-jp.com/api/v3/postcodes/postcode?apiKey=PQF7Paak29Wr688IIVCXC7As7YDPMBGko0KBwdF&postcode={{childText}}`
+      ),
+      props: ["parentText"]
+    };
+  };
 };
 </script>
